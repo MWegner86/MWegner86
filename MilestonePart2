@@ -1,0 +1,61 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+#include<time.h>
+#include<string.h>
+#include<stddef.h>
+
+int main()
+{
+    char* ans = "";
+    int count = 0;
+    int count1 = 0;
+    int response = -1;
+    int user = -1;
+    printf("Welcome to Rock, Paper, Scissors game \n");
+    while (1)
+    {
+        printf("Select any one:\n0->ROCK\n1->PAPER\n2->SCISSOR");
+        char* choices[] = { "ROCK", "PAPER", "SCISSOR \n" };
+        int computer = rand() % 3;
+        
+        user = 3;
+        while(user < 0 || user > 2){
+        printf("\nEnter your choice:");
+        
+        scanf("%i", &user);
+        printf("Please choose again: 0, 1, or 2. \n");
+        }
+        printf("Computer: %s", choices[computer]);
+
+        printf("user chose: %s", choices[user]);
+
+        printf("\n \nWould you like to play again? \n");
+        printf("Press 1 to play again or 2 to exit. \n");
+            
+        scanf("%i", &response);
+        if (response == 2)
+            return 0;
+
+        //Keeping score for week 5
+        //implement Lizard Spock Week 6
+
+        /*if (user == computer)
+            return -1;
+        if (user == 's' && computer == 'p')
+            return 0;
+        else if (user == 'p' && computer == 's') return 1;
+        if (user == 's' && computer == 'z')
+            return 1;
+        else if (user == 'z' && computer == 's')
+            return 0;
+        if (user == 'p' && computer == 'z')
+            return 0;
+        else if (user == 'z' && computer == 'p')
+            return 1;*/
+        
+
+    }
+    return 0;
+}
